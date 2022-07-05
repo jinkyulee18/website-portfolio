@@ -1,339 +1,282 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
 
-:root {
-  --primary-color: #357b70;
-  --secondary-color: #e0b354;
-  --dark-grey: #2b2b2b;
-}
-a {
-  color: var(--primary-color);
-}
+  :root {
+        --primary-color: #380b70;
+        --secondary-color: #e0b354;
+        --dark-grey: #2b2b2b;
+        --background-color: #357b70;
+        --line-color: #2596be;
+        --h1-font-size: 30px;
+        --h2-font-size: 24px;
+        --h3-font-size: 18px;
+        --h-font-weight: 700;
+        --inline-block-display: inline-block;
+        --flex-display: flex;
+      }
+      a {
+        color: var(--primary-color);
+      }
 
-body {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  /* Sets the font size to 16px */
-  line-height: 1.6;
-  /* Sets the line-height to 1.6 */
-}
+      body {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        /* Sets the font size to 16px */
+        line-height: 1.6;
+        /* Sets the line-height to 1.6 */
+      }
 
-h1 {
-  font-size: 30px;
-  font-weight: 700;
-}
+        h1 {
+      	font-size: var(--h1-font-size);
+      	font-weight: var(--h-font-weight);
+      }
 
-h2 {
-  font-size: 24px;
-  font-weight: 700;
-}
+      h2 {
+      	font-size: var(--h2-font-size);
+      	font-weight: var(--h-font-weight);
+      }
 
-h3 {
-  font-size: 18px;
-  font-weight: 700;
-}
-a {
-  color: #357b70;
-}
+      h3 {
+        font-size: var(--h3-font-size);
+        font-weight: var(--h3-font-weight);
+      }
+      a {
+        color: #357b70;
+      }
 
-button {
-  /* overwrites browser defaults and resets the border */
-  border: none;
-  /* takes the font from the outer container */
-  font-family: inherit;
-  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-  background-color: #357b70;
-  color: white;
-  text-decoration: none;
-  /*adds spacing to the button (this will be discussed more in-depth later) */
-  padding: 10px;
-  border-radius: 3px;
-  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+      .button {
+        /* overwrites browser defaults and resets the border */
+        border: none;
+        /* takes the font from the outer container */
+        font-family: inherit;
+        /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+        background-color: var(--primary-color);
+        text-decoration: none;
+        /*adds spacing to the button (this will be discussed more in-depth later) */
+        padding: 10px;
+        border-radius: 3px;
+        /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+        border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 
-}
-button:hover, button:focus {
-  /* lets the mouse appear as a hand when hovering over the button */
-  cursor: pointer;
-  /* reduces the opacity of the button to 80% */
-  opacity: 0.8;
-}
+      }
+      button:hover, button:focus {
+        /* lets the mouse appear as a hand when hovering over the button */
+        cursor: pointer;
+        /* reduces the opacity of the button to 80% */
+        opacity: 0.8;
+      }
 
-.button__secondary {
-  background-color: #e0b354;
-  color: #2b2b2b;
-}
+      .button__secondary {
+        background-color: var(--secondary-color)
+      }
 
-.title-name{
-  text-align: right;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  .title-name{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      padding: 20px;
+      border-bottom: 2px solid black;
+    }
 
-}
-.name-head{
-  text-align: left;
+  .navigation-list__item--active {
+      display: inline;
+      }
+      .navigation-list {
+          display: inline;
+      		justify-content: space-between;
+      		list-style-type: none;
+      		display: inline-block;
+      	}
+  .navigation-list:last-child{
+    text-align: right;
 
-}
-
-
-.navigation-list__item--active {
-  text-decoration: underline;
-}
-
-.navigation-list li {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  list-style-type: none;
-  display: inline-block;
-  margin-left: 15px;
-}
-
-
-div {
-  padding: 10px; /* Adds a 10px inner spacing to all sides*/
-  margin: 10px; /* Adds a 10px outer spacing to all sides*/
-  border: 1px solid black; /* Attributes describe: thickness, type, color*/
-}
-
-.header__title {
-  /* No spacing to top and bottom and auto-spacing to left and right, which centers the container horizontally*/
-  margin: 0 auto;
-}
-.header-align{
-  -ms-flex-line-pack: end;
-      align-content: flex-end;
-}
-
-.profile {
-  min-width: 360px;
-  max-width: 750px;
-  margin: 0 auto;
-}
-
-.profile__portrait {
-  float: left;
-  width: 250px;
-  margin-right: 40px;
-  border-radius: 50%;
-}
-
-.page-footer{
-  text-align: center;
-  clear: both;
-}
-
-.profile__text {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100px;
-            flex: 1 1 100px;
-}
-
-.page-header__item:last-child {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 200px;
-          flex: 0 1 200px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  text-align: right;
-}
-
-.grid{
-  display: -ms-grid;
-  display: grid;
-  background-color: lightgray;
-  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
-}
-
-@media all and (max-width: 500px) {
-  .grid {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
   }
-}
 
-@media all and (min-width: 501px) and (max-width: 750px){
-  .grid {
-    -ms-grid-columns: 1fr 20px 1fr;
-    grid-template-columns: 1fr 1fr;
-  }
-}
+      div {
+        padding: 10px; /* Adds a 10px inner spacing to all sides*/
+        margin: 10px; /* Adds a 10px outer spacing to all sides*/
 
-@media all and (max-width: 750px) {
-  .grid {
-    grid-gap: 10px;
-  }
-  .grid__item:last-child {
-    grid-column: auto / auto;
-    grid-row: auto / auto;
-  }
-  h1 {
-    font-size: 22px;
-  }
-}
+      }
 
-.about-me{
-  text-align: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
+      .header__title {
+        /* No spacing to top and bottom and auto-spacing to left and right, which centers the container horizontally*/
+        margin: 0 auto;
+      }
+      .header-align{
+        align-content: flex-end;
+      }
 
-.berlin-illustration{
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
+      .profile {
+        min-width: 360px;
+        max-width: 750px;
+        margin: 0 auto;
+      }
 
-.button, button {
-  /* overwrites browser defaults */
-  /* resets the border */
-  border: none;
-  display: inline-block;
-  /* takes the font from the outer container */
-  font-family: inherit;
-  /* style button */
-  background-color: #357b70;
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  /* width of the border, type, color */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  -webkit-transition: 0.9s opacity;
-  -o-transition: 0.9s opacity;
-  transition: 0.9s opacity;
-}
-.button{
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
+      .profile__portrait {
+        float: left;
+        width: 250px;
+        margin-right: 40px;
+        border-radius: 50%;
+      }
 
-button:hover,
-button:focus,
-.button:hover,
-.button:focus {
-  /* lets the mouse appear as a hand when hovering over the button */
-  cursor: pointer;
-  /* reduces the opacity of the button to 80% */
-  opacity: 0.8;
-}
+      .page-footer{
+        text-align: center;
+        clear: both;
+      }
 
-.about-picture{
-  margin: auto;
-}
+      .profile__text {
+          flex: 1 1 100px;
+      }
 
-@-webkit-keyframes color-change {
-  0% {
-    fill: #edc655;
-  }
-  50% {
-    fill: #fcffad;
-  }
-  100% {
-    fill: #f76414;
-  }
-}
+      .page-header__item:last-child {
+        flex: 0 1 200px;
+        flex-grow: 0.95;
+        text-align: right;
+        list-style-type: none;
+      }
 
-@keyframes color-change {
-  0% {
-    fill: #edc655;
-  }
-  50% {
-    fill: #fcffad;
-  }
-  100% {
-    fill: #f76414;
-  }
-}
-@-webkit-keyframes  sun-move{
-  from{
-    -webkit-transform: translate(0, 25px);
-            transform: translate(0, 25px);
-  }
-   to{
-     -webkit-transform: translate(150px,25);
-             transform: translate(150px,25);
-   }
-}
-@keyframes  sun-move{
-  from{
-    -webkit-transform: translate(0, 25px);
-            transform: translate(0, 25px);
-  }
-   to{
-     -webkit-transform: translate(150px,25);
-             transform: translate(150px,25);
-   }
-}
+      .grid{
+        display: grid;
+        background-color: var(--dark-grey);
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+      }
 
-.sun {
-  -webkit-animation: 4s color-change infinite alternate linear;
-          animation: 4s color-change infinite alternate linear;
-  -webkit-animation: 10s sun-move infinite alternate linear;
-          animation: 10s sun-move infinite alternate linear;
-}
-.sun-ray{
-  -webkit-animation: 10s sun-move infinite alternate linear;
-          animation: 10s sun-move infinite alternate linear;
-}
+      @media all and (max-width: 500px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
 
-@-webkit-keyframes cloud-move {
-  from {
-    -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
-  }
-  to {
-    -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
-  }
-}
+      @media all and (min-width: 501px) and (max-width: 750px){
+        .grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
 
-@keyframes cloud-move {
-  from {
-    -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
-  }
-  to {
-    -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
-  }
-}
+      @media all and (max-width: 750px) {
+      	.grid {
+      		grid-gap: 10px;
+      	}
+      	.grid__item {
+      		&:last-child {
+      			grid-column: auto / auto;
+      			grid-row: auto / auto;
+      		}
+      	}
+      	h1 {
+      		font-size: 22px;
+      	}
+      }
 
-@-webkit-keyframes cloud-move-reverse {
-  from {
-    -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
-  }
-  to {
-    -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
-  }
-}
 
-@keyframes cloud-move-reverse {
-  from {
-    -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
-  }
-  to {
-    -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
-  }
-}
+      .about-me{
+      text-align: center;
+      }
 
-.cloud-front {
-  -webkit-animation: 30s cloud-move infinite alternate linear;
-          animation: 30s cloud-move infinite alternate linear;
-}
-.cloud-back {
-  -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-          animation: 34s cloud-move-reverse infinite alternate linear;
-}
+      .berlin-illustration{
+        align-content: center;
+      }
+
+      .button, button {
+        /* overwrites browser defaults */
+        /* resets the border */
+        border: none;
+        display: inline-block;
+        /* takes the font from the outer container */
+        font-family: inherit;
+        /* style button */
+        background-color: var(--primary-color);
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 3px;
+        /* width of the border, type, color */
+        border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+        transition: 0.9s opacity;
+        align-items: center;
+      }
+      .button{
+        align-content: center;
+      }
+
+      button:hover,
+      button:focus,
+      .button:hover,
+      .button:focus {
+        /* lets the mouse appear as a hand when hovering over the button */
+        cursor: pointer;
+        /* reduces the opacity of the button to 80% */
+        opacity: 0.8;
+      }
+
+      .about-picture{
+        margin: auto;
+      }
+
+  .in-align{
+    align-items: center;
+    list-style: none;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+    flex:1;
+    text-align: center;
+    padding: 25px;
+
+
+  }
+
+      @keyframes color-change {
+        0% {
+          fill: #edc655;
+        }
+        50% {
+          fill: #fcffad;
+        }
+        100% {
+          fill: #f76414;
+        }
+      }
+      @keyframes  sun-move{
+        from{
+          transform: translate(0, 25px);
+        }
+         to{
+           transform: translate(150px,25);
+         }
+      }
+
+      .sun {
+        animation: 4s color-change infinite alternate linear;
+        animation: 10s sun-move infinite alternate linear;
+      }
+      .sun-ray{
+        animation: 10s sun-move infinite alternate linear;
+      }
+
+      @keyframes cloud-move {
+        from {
+          transform: translate(0, 50px);
+        }
+        to {
+          transform: translate(200px, 50px);
+        }
+      }
+
+      @keyframes cloud-move-reverse {
+        from {
+          transform: translate(446px, 48px);
+        }
+        to {
+          transform: translate(100px, 48px);
+        }
+      }
+
+      .cloud-front {
+        animation: 30s cloud-move infinite alternate linear;
+      }
+      .cloud-back {
+        animation: 34s cloud-move-reverse infinite alternate linear;
+      }
+        color: var(--primary-color);
+      }
