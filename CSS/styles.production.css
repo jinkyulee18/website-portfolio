@@ -2,7 +2,7 @@
   :root {
         --primary-color: #380b70;
         --secondary-color: #e0b354;
-        --dark-grey: #2b2b2b;
+        --dark-grey: #D3D3D3;
         --background-color: #357b70;
         --line-color: #2596be;
         --h1-font-size: 30px;
@@ -39,9 +39,6 @@
         font-size: var(--h3-font-size);
         font-weight: var(--h3-font-weight);
       }
-      a {
-        color: #357b70;
-      }
 
       .button {
         /* overwrites browser defaults and resets the border */
@@ -49,7 +46,7 @@
         /* takes the font from the outer container */
         font-family: inherit;
         /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-        background-color: var(--primary-color);
+        background-color: var(--secondary-color);
         text-decoration: none;
         /*adds spacing to the button (this will be discussed more in-depth later) */
         padding: 10px;
@@ -186,7 +183,7 @@
         /* takes the font from the outer container */
         font-family: inherit;
         /* style button */
-        background-color: var(--primary-color);
+        background-color: var(--line-color);
         text-decoration: none;
         padding: 10px;
         border-radius: 3px;
