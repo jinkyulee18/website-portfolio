@@ -11,7 +11,8 @@
         --h-font-weight: 700;
         --inline-block-display: inline-block;
         --flex-display: flex;
-      }
+  }
+
       a {
         color: var(--primary-color);
       }
